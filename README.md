@@ -133,5 +133,4 @@ Management of donated clothing and other items that cannot be delivered directly
  ├── 📁 Access_Interface
  │    └── Screenshots (in development)
  ├── LICENSE
- ├── .gitignore
  └── README.md
