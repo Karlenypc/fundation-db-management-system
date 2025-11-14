@@ -1,7 +1,5 @@
 ﻿/********************************************************************************************
 * Stored Procedure: Donations.SP_DeleteInKindDonation
-* Author: Karleny Pérez
-* Date: 2025-11-11
 *
 * Description:
 *   Deletes an existing in-kind donation from the Donations.DonationInKind table.
@@ -17,6 +15,9 @@
 * Security Management:
 *   For the use of this stored procedure, a single user was created who has access to 
 *   the donations module, which is one of the most sensitive.
+*
+* Author: Karleny Pérez
+* Date: 2025-11-11
 *
 * Example of execution:
 *   EXEC Donations.SP_DeleteInKindDonation @DonationId = 3;

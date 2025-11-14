@@ -1,7 +1,9 @@
 /********************************************************************************************
 * View: Donations.vw_InKindDonation
+*
 * Author: Karleny Pérez
 * Date: 2025-11-11
+*
 * Description:
 *   Displays a consolidated view of all in-kind donations with donor, quantity, 
 *   destination, and other descriptive information.
@@ -39,6 +41,6 @@ SELECT
     ISNULL(e.observations, '') AS 'Observations'
 FROM Donations.DonationInKind e
 INNER JOIN Donations.Donor d ON e.id_donor = d.id_donor
-INNER JOIN Donations.MeasurementUnit um ON e.unit_measurement = um.id_unit
-INNER JOIN Donations.DonationDestination td ON e.id_destination = td.id_destinationType;
+INNER JOIN Donations.UnitOfMeasure um ON e.unit_id = um.unit_id 
+INNER JOIN Donations.DonationDestinationType td ON e.destination_id = td.destination_id;
 GO

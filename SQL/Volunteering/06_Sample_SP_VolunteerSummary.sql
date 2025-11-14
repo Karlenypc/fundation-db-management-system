@@ -74,12 +74,12 @@ BEGIN
 			LEFT JOIN Institutions.Institution i 
 				ON v.institution_id = i.institution_id
 
-        WHERE v.volunteer_id = @VolunteerId
+        WHERE v.volunteer_id = @VolunteerId;
 
     END TRY
     BEGIN CATCH
-        DECLARE @ErrorMessage NVARCHAR(4000),
-                @CustomMessage NVARCHAR(4000);
+        DECLARE @ErrorMessage VARCHAR(4000),
+                @CustomMessage VARCHAR(4000);
 
         SET @ErrorMessage = ERROR_MESSAGE();
         SET @CustomMessage = '❌ Error retrieving volunteering summary: ' + @ErrorMessage;

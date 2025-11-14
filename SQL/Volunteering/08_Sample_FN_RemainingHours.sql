@@ -3,6 +3,7 @@ Function: Volunteers.FN_RemainingHours
 
 Description: Calculates the remaining hours a volunteer needs 
              to complete their required volunteering hours.
+
 Author: Karleny Pérez
 Created: 2025-11-13
 *************************************************************/

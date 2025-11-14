@@ -1,7 +1,5 @@
 ﻿/************************************************************
 * Stored Procedure: Volunteers.SP_InsertVolunteer
-* Author: Karleny Pérez
-* Date: 2025-11-12
 *
 * Description: Registers a new volunteer after validating
 *              their id number, and foreign key references.
@@ -9,6 +7,9 @@
 * Notes:
 *  - Includes validation for inactive or invalid references.
 *  - Exception handling with custom error messages.
+*
+* Author: Karleny Pérez
+* Date: 2025-11-12
 *************************************************************/
 ALTER PROCEDURE Volunteers.SP_InsertVolunteer
     @IdNumber VARCHAR(20),
@@ -94,8 +95,8 @@ BEGIN
 
     END TRY
     BEGIN CATCH
-        DECLARE @ErrorMessage NVARCHAR(4000),
-                @CustomMessage NVARCHAR(4000);
+        DECLARE @ErrorMessage VARCHAR(4000),
+                @CustomMessage VARCHAR(4000);
 
         SET @ErrorMessage = ERROR_MESSAGE();
         SET @CustomMessage = '❌ Error inserting volunteer: ' + @ErrorMessage;

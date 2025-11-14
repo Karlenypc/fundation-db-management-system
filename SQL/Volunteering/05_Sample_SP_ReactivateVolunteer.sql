@@ -1,7 +1,5 @@
 ﻿/*******************************************************************
 * Stored Procedure: Volunteers.SP_ReactivateVolunteer
-* Author: Karleny Pérez
-* Date: 2025-11-12
 *
 * Description:
 *   Reactivates a previously inactive volunteer by
@@ -14,6 +12,9 @@
 *   - Throws a custom error if the volunteer does not exist.
 *   - Captures and rethrows any unexpected SQL errors with a 
 *     descriptive message.
+*
+* Author: Karleny Pérez
+* Date: 2025-11-12
 *
 * Example of execution:
 *   EXEC Volunteers.SP_ReactivateVolunteer @VolunteerId = 3;
@@ -45,8 +46,8 @@ BEGIN
 
     END TRY
     BEGIN CATCH
-        DECLARE @ErrorMessage NVARCHAR(4000),
-                @CustomMessage NVARCHAR(4000);
+        DECLARE @ErrorMessage VARCHAR(4000),
+                @CustomMessage VARCHAR(4000);
 
         SET @ErrorMessage = ERROR_MESSAGE();
         SET @CustomMessage = '❌ Error reactivating volunteer: ' + @ErrorMessage;

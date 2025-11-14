@@ -10,8 +10,10 @@ Created: 2025-11-12
 *************************************************************/
 CREATE FUNCTION Volunteers.FN_VolunteerStatus(@VolunteerId INT)
 RETURNS VARCHAR(20)
+
 AS
 BEGIN
+
 	DECLARE @Type VARCHAR(50);
 
     -- Use of BIGINT to compare

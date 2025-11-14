@@ -1,7 +1,5 @@
 ﻿/************************************************************
 * Stored Procedure: Donations.SP_UpdateInKindDonation
-* Author: Karleny Pérez
-* Date: 2025-11-11
 *
 * Description: Updates an existing in-kind donation when needed.
 *
@@ -18,6 +16,9 @@
 *    The donor_id cannot be updated for security reasons. 
 *    If the user enters the wrong donor_id, they must delete the 
 *    entire record and generate it again.
+*
+* Author: Karleny Pérez
+* Date: 2025-11-11
 *************************************************************/
 ALTER PROCEDURE Donations.SP_UpdateInKindDonation
 	@DonationId INT,

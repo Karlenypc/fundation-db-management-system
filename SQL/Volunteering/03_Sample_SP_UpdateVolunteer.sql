@@ -1,7 +1,5 @@
 ﻿/************************************************************
 * Stored Procedure: Volunteers.SP_UpdateVolunteer
-* Author: Karleny Pérez
-* Date: 2025-11-12
 *
 * Description: Updates an existing volunteer when needed.
 *
@@ -13,6 +11,9 @@
 *    The id number cannot be updated for security reasons. 
 *    If the user enters the wrong id number, they must delete  
 *    the entire record and generate it again.
+*
+* Author: Karleny Pérez
+* Date: 2025-11-12
 *************************************************************/
 ALTER PROCEDURE Volunteers.SP_UpdateVolunteer
     @VolunteerId INT,
@@ -83,8 +84,8 @@ BEGIN
 
     END TRY
     BEGIN CATCH
-        DECLARE @ErrorMessage NVARCHAR(4000),
-                @CustomMessage NVARCHAR(4000);
+        DECLARE @ErrorMessage VARCHAR(4000),
+                @CustomMessage VARCHAR(4000);
 
         SET @ErrorMessage = ERROR_MESSAGE();
         SET @CustomMessage = '❌ Error updating volunteer: ' + @ErrorMessage;

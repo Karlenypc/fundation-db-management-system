@@ -1,7 +1,5 @@
 ﻿/************************************************************
 * Stored Procedure: Donations.SP_InsertInKindDonation
-* Author: Karleny Pérez
-* Date: 2025-11-11
 *
 * Description: Registers a new in-kind donation after validating
 *              donor, measurement unit, destination type, and 
@@ -16,6 +14,9 @@
 *  - Automatically assigns the current date if not provided.
 *  - Includes validation for inactive or invalid references.
 *  - Exception handling with custom error messages.
+*
+* Author: Karleny Pérez
+* Date: 2025-11-11
 *************************************************************/
 ALTER PROCEDURE Donations.SP_InsertInKindDonation
     @DonorId INT,
